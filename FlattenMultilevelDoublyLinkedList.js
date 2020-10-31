@@ -41,3 +41,10 @@ const flatten = head => {
   }
   return head;
 };
+
+/**
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ *
+ * N - number of nodes in linked list
+ */
