@@ -44,10 +44,10 @@ const partition = (left, right, pivot_index, nums) => {
   return store_index;
 };
 
-const swap = (idx1, idx2, nums) => {
-  let temp = nums[idx1];
-  nums[idx1] = nums[idx2];
-  nums[idx2] = temp;
+const swap = (a, b, nums) => {
+  let temp = nums[a];
+  nums[a] = nums[b];
+  nums[b] = temp;
 };
 
 /**
