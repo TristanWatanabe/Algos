@@ -14,11 +14,13 @@
  * Return totalOnes - maxOnes
  */
 const minSwaps = data => {
-
+    
 }
 
 
 
  /**
- * 
+ * N - number of elements in input array
+ * Time Complexity - O(N)
+ * Space Complexity - O(1)
  */
