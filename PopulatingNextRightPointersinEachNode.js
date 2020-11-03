@@ -13,6 +13,29 @@
  *  Return input root
  */
 
+const connect = root => {
+  //empty tree
+  if (!root) return root;
+  let queue = [[root, 0]];
+  while (queue.length) {
+    const size = queue.length;
+    for (let i = 0; i < size; i++) {
+      let curr = queue.shift();
+      //current node and level
+      let node = curr[0],
+        level = curr[1];
+      //connect siblings together
+      if (queue.length && level === queue[0][1]) {
+        node.next = queue[0][0];
+      }
+      //push left and right nodes to queue
+      if (node.left) queue.push([node.left, level + 1]);
+      if (node.right) queue.push([node.right, level + 1]);
+    }
+  }
+  return root;
+};
+
 /**
  * N - number of nodes in tree
  * Time Complexity: O(N)
