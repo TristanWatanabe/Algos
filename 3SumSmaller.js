@@ -16,5 +16,7 @@
  */
 
 /**
- *
+ * N - number of elements in array
+ * Time Complexity: O(NlogN): sorting dominates algorithm
+ * Space Complexity: O(1)
  */
