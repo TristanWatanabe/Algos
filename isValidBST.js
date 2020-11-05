@@ -38,3 +38,9 @@ const isValid = (curr, min, max) => {
     return false;
   }
 };
+
+/**
+ * N - number of nodes in tree
+ * Time Complexity: O(N) every node is visited once
+ * Space Complexity: O(N)
+ */
