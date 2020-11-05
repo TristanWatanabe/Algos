@@ -15,3 +15,26 @@
  *      Else return false
  *
  */
+
+/**
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+
+const isValidBST = (root) => {
+  return isValid(root, -Infinity, Infinity);
+};
+
+const isValid = (curr, min, max) => {
+  if (!curr) return true;
+  if (curr.val > min && curr.val < max) {
+    return (
+      isValid(curr.left, min, curr.val) && isValid(curr.right, curr.val, max)
+    );
+  } else {
+    return false;
+  }
+};
