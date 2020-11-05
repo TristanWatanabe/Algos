@@ -17,3 +17,9 @@ const climbStairs = (n) => {
   }
   return dp[n];
 };
+
+/**
+ * N - input
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
