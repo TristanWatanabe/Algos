@@ -45,3 +45,9 @@ const threeSum = (nums) => {
   }
   return triplets;
 };
+
+/**
+ * N - number of elements in input array
+ * Time Complexity: O(N^2)
+ * Space Complexity: O(1)
+ */
