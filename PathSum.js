@@ -16,3 +16,10 @@ const hasPathSum = (root, sum, currSum = 0) => {
     hasPathSum(root.left, sum, currSum) || hasPathSum(root.right, sum, currSum)
   );
 };
+
+/**
+ * N - number of nodes in tree
+ * Time Complexity: O(N) every node is visited once
+ * Space Complexity: best case: balanced tree which means height of tree is only logN => O(logN)
+ *                   worst case: unbalanced tree which means height of tree is N => O(N)
+ */
