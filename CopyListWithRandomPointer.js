@@ -12,3 +12,30 @@
  *      = set copyy's random ptr to equal to map at node.random
  * Return map at head
  */
+
+//  class Node{
+//      constructor(val, next, random){
+//          this.val = val
+//          this.next = next
+//          this.random = random
+//      }
+//  }
+
+const copyRandomList = (head) => {
+  let map = new Map();
+  let curr = head;
+  //populate map with copies of each node in linked list
+  while (curr) {
+    map.set(curr, new Node(curr.val));
+    curr = curr.next;
+  }
+  curr = head;
+  //Connect the copy nodes together
+  while (curr) {
+    let copy = map.get(curr);
+    copy.next = map.get(curr.next) ? map.get(curr.next) : null;
+    copy.random = map.get(curr.random) ? map.get(curr.random) : null;
+    curr = curr.next;
+  }
+  return map.get(head);
+};
