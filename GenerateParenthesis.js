@@ -23,3 +23,9 @@ const backtrack = (str, open, close, n, result) => {
   if (open < n) backtrack(str + "(", open + 1, close, n, result);
   if (close < open) backtrack(str + ")", open, close + 1, n, result);
 };
+
+/**
+ * n - input
+ * Time Complexity: O(4n/squareroot(n)) - each valid sequence has at most n steps during the backtrack process
+ * Space Complexity: O(4n/squareroot(n))
+ */
