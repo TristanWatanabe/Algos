@@ -39,3 +39,9 @@ const copyRandomList = (head) => {
   }
   return map.get(head);
 };
+
+/**
+ * N - number of nodes in linked list
+ * Time Complexity: O(N) each node is visited once
+ * Space Complexity: O(N) each node is stored in map once
+ */
