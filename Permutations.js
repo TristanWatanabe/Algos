@@ -13,3 +13,22 @@
  *          - recursively call helper function with nums modified to exclude element at index i
  *          - pop from curr
  */
+
+const permute = (nums) => {
+  let result = [];
+  helper([], result, nums);
+  return result;
+};
+
+const helper = (curr, result, nums) => {
+  if (!nums.length) {
+    result.push([...curr]);
+    return;
+  }
+  for (let i = 0; i < nums.length; i++) {
+    curr.push(nums[i]);
+    let newArr = nums.slice(0, i).concat(nums.slice(i + 1));
+    helper(curr, result, newArr);
+    curr.pop();
+  }
+};
