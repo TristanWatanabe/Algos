@@ -37,3 +37,9 @@ class Solution {
     return this.shuffled;
   }
 }
+
+/**
+ * N - input array
+ * Time Complexity: All Operations are O(N)
+ * Space Complexity: O(N)
+ */
