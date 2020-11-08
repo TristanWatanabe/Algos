@@ -32,3 +32,9 @@ const helper = (curr, result, nums) => {
     curr.pop();
   }
 };
+
+/**
+ * N - number of elements in array
+ * Time Complexity: O(N!)
+ * Space Complexity: O(N!)
+ */
