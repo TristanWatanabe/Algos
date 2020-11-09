@@ -27,3 +27,10 @@ const merge = (nums1, m, nums2, n) => {
   }
   return nums1;
 };
+
+/**
+ * N - number of elements in nums1
+ * M - number of elements in nums2
+ * Time Complexity: O(N+M)
+ * Space Complexity: O(1)
+ */
