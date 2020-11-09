@@ -11,3 +11,21 @@
  * Reconstruct final result string by using characters left in stack
  * Return result
  */
+
+const removeDuplicates = (s, k) => {
+  let stack = [];
+  let result = "";
+  for (const char of s) {
+    const last = stack.length - 1;
+    if (stack.length && char === stack[last][0]) {
+      stack[last][1]++;
+      if (stack[last][1] === k) stack.pop();
+    } else {
+      stack.push([char, 1]);
+    }
+  }
+  for (const char of stack) {
+    result += char[0].repeat(char[1]);
+  }
+  return result;
+};
