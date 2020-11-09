@@ -29,3 +29,9 @@ const removeDuplicates = (s, k) => {
   }
   return result;
 };
+
+/**
+ * N - number of characters in string
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
