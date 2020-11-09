@@ -13,3 +13,17 @@
  *          - decrement n
  *  Return nums1
  */
+
+const merge = (nums1, m, nums2, n) => {
+  m--, n--;
+  for (let i = nums1.length - 1; i >= 0; i--) {
+    if (nums1[m] >= nums2[n] || n < 0) {
+      nums1[i] = nums1[m];
+      m--;
+    } else {
+      nums1[i] = nums2[n];
+      n--;
+    }
+  }
+  return nums1;
+};
