@@ -15,3 +15,20 @@
  *      - increment startPtr to look at next meeting
  *  Return numRooms
  */
+
+const minMeetingRooms = (meetings) => {
+  let start = meetings.map((m) => m[0]).sort((a, b) => a - b);
+  let end = meetings.map((m) => m[1]).sort((a, b) => a - b);
+  let startPtr = 0,
+    endPtr = 0;
+  let numRooms = 0;
+  while (startPtr < meetings.length) {
+    numRooms++;
+    if (start[startPtr] >= end[endPtr]) {
+      numRooms--;
+      endPtr++;
+    }
+    startPtr++;
+  }
+  return numRooms;
+};
