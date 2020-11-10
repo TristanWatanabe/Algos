@@ -13,3 +13,9 @@ const canAttendMeetings = (meetings) => {
   }
   return true;
 };
+
+/**
+ * N - number of elements in array
+ * Time Complexity: O(NLogN) sorting dominates solutions
+ * Space Complexity: O(1)
+ */
