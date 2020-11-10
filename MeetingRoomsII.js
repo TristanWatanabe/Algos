@@ -32,3 +32,9 @@ const minMeetingRooms = (meetings) => {
   }
   return numRooms;
 };
+
+/**
+ * N - number of meetings
+ * Time Complexity: O(NLogN) sorting dominates solution
+ * Space Complexity: O(N) we store copies of meetings into separate arrays
+ */
