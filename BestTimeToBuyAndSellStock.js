@@ -9,3 +9,17 @@
  *          - set min to equal price
  * Return maxProfit
  */
+
+const maxProfit = (prices) => {
+  let min = prices[0];
+  let maxProfit = 0;
+  for (let i = 1; i < prices.length; i++) {
+    const price = prices[i];
+    if (price > min) {
+      maxProfit = Math.max(price - min, maxProfit);
+    } else if (price < min) {
+      min = price;
+    }
+  }
+  return maxProfit;
+};
