@@ -23,3 +23,9 @@ const maxProfit = (prices) => {
   }
   return maxProfit;
 };
+
+/**
+ * N - number of stock prices in input array
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
