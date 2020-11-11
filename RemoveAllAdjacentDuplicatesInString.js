@@ -16,3 +16,9 @@ const removeDuplicates = (S) => {
   }
   return stack.join("");
 };
+
+/**
+ * N - number of characters in string
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
