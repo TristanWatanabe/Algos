@@ -62,3 +62,10 @@ const addTwoNumbers = (l1, l2) => {
 
   return result.next;
 };
+
+/**
+ * N - number of nodes in linked list 1
+ * M - number of nodes in linked list 2
+ * Time Complexity: O(N+M)
+ * Space Complexity: O(N+M)
+ */
