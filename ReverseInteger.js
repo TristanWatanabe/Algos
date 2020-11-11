@@ -11,3 +11,14 @@
  * If result doesnt overflow, return result
  * Else return 0
  */
+
+const reverse = (x) => {
+  x = x.toString();
+  let result = 0;
+  if (x[0] == "-") {
+    result = Number(x[0] + [...x.slice(1)].reverse().join(""));
+  } else {
+    result = Number([...x].reverse().join(""));
+  }
+  return result >= Math.pow(2, 31) || result <= Math.pow(-2, 31) ? 0 : result;
+};
