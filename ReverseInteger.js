@@ -22,3 +22,9 @@ const reverse = (x) => {
   }
   return result >= Math.pow(2, 31) || result <= Math.pow(-2, 31) ? 0 : result;
 };
+
+/**
+ * N - number of digits in input
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
