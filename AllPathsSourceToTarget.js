@@ -14,3 +14,22 @@
  *          - call backtrack again with current value as index now, path, target, paths, graph
  *          - pop from path in order to backtrack and explore another path
  */
+
+const allPathsSourceTarget = (graph) => {
+  const target = graph.length - 1;
+  let paths = [];
+  backTrack(0, [0], target, paths, graph);
+  return paths;
+};
+
+const backTrack = (index, path, target, paths, graph) => {
+  if (index === target) {
+    paths.push([...path]);
+  } else {
+    for (const node of graph[index]) {
+      path.push(node);
+      backTrack(node, path, target, paths, graph);
+      path.pop();
+    }
+  }
+};
