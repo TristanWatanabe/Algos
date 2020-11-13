@@ -31,3 +31,9 @@ const twoCitySchedCost = (costs) => {
   }
   return total;
 };
+
+/**
+ * N - number of people in input array
+ * Time Complexity: O(NlogN) sorting dominates solution
+ * Space Complexity: O(1)
+ */
