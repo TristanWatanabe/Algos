@@ -12,3 +12,22 @@
  *          - increment total by the cost of going to city A
  * Return total
  */
+
+const twoCitySchedCost = (costs) => {
+  let total = 0;
+  costs = costs
+    .map((person) => [person[0], person[1], person[0] - person[1]])
+    .sort((a, b) => a[2] - b[2]);
+  for (let i = 0; i < costs.length; i++) {
+    let person = costs[i];
+    //person goes to cityB
+    if (i > costs.length / 2 - 1) {
+      total += person[1];
+    }
+    //person goes to cityA
+    else {
+      total += person[0];
+    }
+  }
+  return total;
+};
