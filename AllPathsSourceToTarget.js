@@ -33,3 +33,9 @@ const backTrack = (index, path, target, paths, graph) => {
     }
   }
 };
+
+/**
+ * N - number of nodes in graph
+ * Time Complexity: O(2^N * N) 2^N to find paths and N to build a path
+ * Space Complexity: O(2^N * N)
+ */
