@@ -22,3 +22,9 @@ const numIdenticalPairs = (nums) => {
   }
   return pairs;
 };
+
+/**
+ * N - number of elements in nums
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
