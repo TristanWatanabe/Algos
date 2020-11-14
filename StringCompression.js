@@ -42,3 +42,9 @@ const compress = (chars) => {
   }
   return chars.length;
 };
+
+/**
+ * N - number of characters in input array
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
