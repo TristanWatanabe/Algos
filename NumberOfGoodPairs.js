@@ -8,3 +8,17 @@
  *          and then increment map[number] by 1
  * Return pairs
  */
+
+const numIdenticalPairs = (nums) => {
+  let map = {},
+    pairs = 0;
+  for (const num of nums) {
+    if (map[num]) {
+      pairs += map[num];
+      map[num]++;
+    } else {
+      map[num] = 1;
+    }
+  }
+  return pairs;
+};
