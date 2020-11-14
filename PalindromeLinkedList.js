@@ -74,3 +74,9 @@ const compare = (p1, p2) => {
   }
   return true;
 };
+
+/**
+ * N - number of nodes in linked list
+ * Time Complexity: O(N)
+ * Space Complexity: O(1) : we modify the input linked list in place
+ */
