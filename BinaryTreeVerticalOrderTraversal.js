@@ -16,3 +16,27 @@
  * Loop from min to max
  *  - push to result array the value at hash[index]
  */
+
+const verticalOrder = (root) => {
+  if (!root) return [];
+  let q = [[root, 0]];
+  let hash = {};
+  let result = [];
+  let min = 0,
+    max = 0;
+
+  while (q.length) {
+    let curr = q.shift();
+    let node = curr[0],
+      col = curr[1];
+    min = Math.min(min, col);
+    max = Math.max(max, col);
+    if (node.left) q.push([node.left, col - 1]);
+    if (node.right) q.push([node.right, col + 1]);
+    hash[col] ? hash[col].push(node.val) : (hash[col] = [node.val]);
+  }
+  for (min; min <= max; min++) {
+    result.push(hash[min]);
+  }
+  return result;
+};
