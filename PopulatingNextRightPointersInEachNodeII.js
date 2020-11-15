@@ -12,3 +12,21 @@
  *          - with level + 1 to indicate that they are in another level of the tree
  *  Return input root
  */
+
+const connect = (root) => {
+  if (!root) return root;
+  let q = [[root, 0]];
+  while (q.length) {
+    let size = q.length;
+    for (let i = 0; i < size; i++) {
+      let curr = q.shift();
+      let node = curr[0],
+        level = curr[1];
+      let next = q.length && level === q[0][1] ? q[0][1] : null;
+      node.next = next;
+      if (node.left) q.push([node.left, level + 1]);
+      if (node.right) q.push([node.right, level + 1]);
+    }
+  }
+  return root;
+};
