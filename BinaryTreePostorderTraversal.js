@@ -1,7 +1,6 @@
 /**
- * Order: Left, Root, Right
+ * Order: Left, Right, Root
  */
-
 class TreeNode {
   constructor(val, left, right) {
     this.val = val;
@@ -10,7 +9,7 @@ class TreeNode {
   }
 }
 
-const inorderTraversal = (root) => {
+const postorderTraversal = (root) => {
   if (!root) return [];
   let order = [];
   traverse(root, order);
@@ -20,6 +19,6 @@ const inorderTraversal = (root) => {
 const traverse = (node, order) => {
   if (!node) return;
   traverse(node.left, order);
-  order.push(node.val);
   traverse(node.right, order);
+  order.push(node.val);
 };
