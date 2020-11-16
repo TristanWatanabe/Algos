@@ -20,17 +20,19 @@
 
 const compress = (chars) => {
   let s = "";
-  let count = 1;
-  let prev = chars[0];
+  let count = 0;
+  let prev = null;
   //Build compressed string and store to s
-  for (let i = 1; i <= chars.length; i++) {
+  for (let i = 0; i <= chars.length; i++) {
     const char = chars[i];
     if (prev === char) count++;
     else {
-      s = s + prev + (count > 1 ? count : "");
+      if (prev !== null) {
+        s = s + prev + (count > 1 ? count : "");
+      }
       count = 1;
+      prev = char;
     }
-    prev = char;
   }
   //Modify chars array
   for (let i = 0; i < s.length; i++) {
