@@ -39,3 +39,9 @@ const levelOrder = (root) => {
   }
   return result;
 };
+
+/**
+ * N - number of nodes in binary tree
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
