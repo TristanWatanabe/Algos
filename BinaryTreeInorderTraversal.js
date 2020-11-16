@@ -1,5 +1,5 @@
 /**
- * Order: Root, Left, Right
+ * Order: Left, Root, Right
  */
 
 class TreeNode {
@@ -19,7 +19,7 @@ const preorderTraversal = (root) => {
 
 const traverse = (node, order) => {
   if (!node) return;
-  order.push(node.val);
   traverse(node.left, order);
+  order.push(node.val);
   traverse(node.right, order);
 };
