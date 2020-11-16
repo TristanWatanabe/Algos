@@ -13,3 +13,29 @@
  *      - Push numsInLevel to result
  *  Return result
  */
+
+class TreeNode {
+  constructor(val, left, right) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+const levelOrder = (root) => {
+  if (!root) return [];
+  let q = [root];
+  let result = [];
+  while (q.length) {
+    let size = q.length;
+    let numsInLevel = [];
+    for (let i = 0; i < size; i++) {
+      let node = q.shift();
+      numsInLevel.push(node.val);
+      if (node.left) q.push(node.left);
+      if (node.right) q.push(node.right);
+    }
+    result.push(numsInLevel);
+  }
+  return result;
+};
