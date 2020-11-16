@@ -17,6 +17,14 @@
  *  - push to result array the value at hash[index]
  */
 
+class TreeNode {
+  constructor(val, left, right) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
 const verticalOrder = (root) => {
   if (!root) return [];
   let q = [[root, 0]];
