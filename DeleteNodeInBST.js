@@ -32,3 +32,51 @@
  *      - set root to equal root.right
  *  Return root.val
  */
+
+const deleteNode = (root, key) => {
+  if (!root) return root;
+  //check right subtree
+  if (key > root.val) {
+    root.right = deleteNode(root.right, key);
+  }
+  //check left subtree
+  else if (key < root.val) {
+    root.left = deleteNode(root.left, key);
+  }
+  //node is equal to key
+  else {
+    //if node is a leaf
+    if (!root.left && !root.right) {
+      root = null;
+    }
+    //if node is not a leaf and has a right child
+    else if (root.right) {
+      root.val = successor(root);
+      root.right = deleteNode(root.right, root.val);
+    }
+    //if node is not a leaf and has no right child
+    else {
+      root.val = predecessor(root);
+      root.left = deleteNode(root.left, root.val);
+    }
+  }
+  return root;
+};
+//Finds leftmost right child
+const successor = (root) => {
+  //move one step to the right then always left
+  root = root.right;
+  while (root.left) {
+    root = root.left;
+  }
+  return root.val;
+};
+//Finds rightmost left child
+const predecessor = (root) => {
+  //move one step to the left then always right
+  root = root.left;
+  while (root.right) {
+    root = root.right;
+  }
+  return root.val;
+};
