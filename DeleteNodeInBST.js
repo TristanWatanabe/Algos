@@ -32,7 +32,13 @@
  *      - set root to equal root.right
  *  Return root.val
  */
-
+class TreeNode {
+  constructor(val, left, right) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
 const deleteNode = (root, key) => {
   if (!root) return root;
   //check right subtree
