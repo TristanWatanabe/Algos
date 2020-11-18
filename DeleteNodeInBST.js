@@ -86,3 +86,10 @@ const predecessor = (root) => {
   }
   return root.val;
 };
+
+/**
+ * N - number of nodes in BST
+ * H - height of the tree
+ * Time Complexity: O(logN)
+ * Space Complexity: O(H), O(logN) if tree is balanced
+ */
