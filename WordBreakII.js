@@ -22,3 +22,37 @@
  *          - pop from curr so we can try another possible combination once recursion resolves
  *  Return
  */
+
+const wordBreak = (s, wordDict) => {
+  let dict = {};
+  let result = [];
+  let wordDictString = wordDict.join("");
+  //check to quickly eliminate cases where s has characters that arent included in any words present in wordDict
+  for (const char of s) {
+    if (!wordDictString.includes(char)) return result;
+  }
+  //create hash table version of wordDict
+  for (const word of wordDict) {
+    dict[word] = true;
+  }
+  findValid(0, [], s, dict, result);
+  return result;
+};
+
+const findValid = (index, curr, s, dict, result) => {
+  if (index == s.length) {
+    result.push(curr.join(" "));
+    return;
+  }
+  let str = "";
+  for (let i = index; i < s.length; i++) {
+    str += s[i];
+
+    if (dict[str]) {
+      curr.push(str);
+      findValid(i + 1, curr, s, dict, result);
+      curr.pop();
+    }
+  }
+  return;
+};
