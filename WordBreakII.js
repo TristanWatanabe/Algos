@@ -56,3 +56,9 @@ const findValid = (index, curr, s, dict, result) => {
   }
   return;
 };
+
+/**
+ * N - number of chars in s
+ * Time Complexity: O(2^N) when each word dict is found in every iteration of s
+ * Space Complexity: O(2^N)
+ */
