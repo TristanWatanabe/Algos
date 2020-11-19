@@ -49,3 +49,9 @@ const maxLength = (arr) => {
   traverse(0, arr, []);
   return max;
 };
+
+/**
+ * N- number of elements in array
+ * Time Complexity: O(2^N*N)
+ * Space Complexity: O(2^N*N)
+ */
