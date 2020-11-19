@@ -33,3 +33,15 @@ class Leaderboard {
     if (this.scores[id]) this.scores[id] = 0;
   }
 }
+
+/**
+ * AddScore:
+ *  Time Complexity: O(1)
+ *  Space Complexity: O(N)
+ * Top:
+ *  Time Complexity: O(NLogN) due to sorting
+ *  Space Complexity: O(N)
+ * Reset:
+ *  Time Complexity: O(1)
+ *  Space Complexity: O(1)
+ */
