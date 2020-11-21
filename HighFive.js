@@ -33,3 +33,9 @@ const highFive = (items) => {
   }
   return result;
 };
+
+/**
+ * N - number of elements in items
+ * Time Complexity: O(NLogN)
+ * Space Complexity: O(N)
+ */
