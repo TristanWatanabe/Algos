@@ -13,7 +13,7 @@
  *  Return left
  */
 
-var searchInsert = function (nums, target) {
+const searchInsert = (nums, target) => {
   let left = 0,
     right = nums.length - 1;
   while (left <= right) {
@@ -29,3 +29,9 @@ var searchInsert = function (nums, target) {
   }
   return left;
 };
+
+/**
+ * N - number of elements in nums
+ * Time Complexity: O(logN)
+ * Space Complexity: O(1)
+ */
