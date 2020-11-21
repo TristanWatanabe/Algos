@@ -16,3 +16,23 @@
  *      - have max equal max between current bar and max
  *  Return max
  */
+
+const trap = (height) => {
+  let totalWater = 0;
+  for (let i = 0; i < height.length; i++) {
+    const curr = height[i];
+    const maxLeft = findMax(0, i, height);
+    const maxRight = findMax(i + 1, height.length, height);
+    const min = Math.min(maxLeft, maxRight);
+    if (min > curr) totalWater += min - curr;
+  }
+  return totalWater;
+};
+
+const findMax = (start, end, height) => {
+  let max = 0;
+  for (let i = start; i < end; i++) {
+    max = Math.max(height[i], max);
+  }
+  return max;
+};
