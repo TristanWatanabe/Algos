@@ -36,3 +36,9 @@ const findMax = (start, end, height) => {
   }
   return max;
 };
+
+/**
+ * N - number of bars
+ * Time Complexity: O(N^2)
+ * Space Complexity: O(1)
+ */
