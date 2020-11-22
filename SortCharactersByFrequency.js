@@ -32,3 +32,9 @@ const frequencySort = (s) => {
   }
   return result.join("");
 };
+
+/**
+ * N - number of characters in s
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
