@@ -29,3 +29,9 @@ const killProcess = (pid, ppid, kill) => {
   }
   return result;
 };
+
+/**
+ * N - number of processes
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
