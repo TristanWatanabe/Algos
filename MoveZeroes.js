@@ -20,3 +20,9 @@ const moveZeroes = (nums) => {
   while (index < nums.length) nums[index++] = 0;
   return nums;
 };
+
+/**
+ * N - number of elements in input array
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
