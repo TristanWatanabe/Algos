@@ -33,3 +33,9 @@ const sortedSquares = (A) => {
   //reverse result since it's currently sorted in descending order
   return result.reverse();
 };
+
+/**
+ * N - number of elements in input array
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
