@@ -15,3 +15,27 @@
  *      - increment right pointer to increase sliding window
  * Return result
  */
+
+const maxSlidingWindow = (nums, k) => {
+  let max = -Infinity;
+  let result = [];
+  let left = 0,
+    right = 0;
+  while (left <= nums.length - k) {
+    const num = nums[right];
+    max = Math.max(max, num);
+    if (right - left + 1 === k) {
+      result.push(max);
+      //reset max and right pointer since the last max is removed from sliding window and we have to determine a new max
+      if (nums[left] === max) {
+        max = -Infinity;
+        right = left;
+      }
+      //move left pointer forward
+      left++;
+    }
+    //move right pointer forward
+    right++;
+  }
+  return result;
+};
