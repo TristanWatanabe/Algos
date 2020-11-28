@@ -39,3 +39,11 @@ const maxSlidingWindow = (nums, k) => {
   }
   return result;
 };
+
+/**
+ * N - number of elements in nums
+ * K - max sliding window
+ * Time Complexity: O(N*K) - worst case is the max is removed everytime we reach the max window size,
+ *          causing right pointer to move back
+ * Space Complexity: O(N) - O(N - K +1) is reduced to O(N)
+ */
