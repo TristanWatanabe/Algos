@@ -32,3 +32,10 @@ const helper = (start, end, s, k) => {
   }
   return end - start;
 };
+
+/**
+ * N - number of characters in string
+ * Time Complexity: O(N^2) - O(N) to go through helper * O(N) for 1 recursive call
+ * Space Complexity: O(N) - space used for recursive call stack
+ *
+ */
