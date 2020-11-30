@@ -1,3 +1,21 @@
+/*
+Order: top to bottom, left to right
+variables: 
+    -Hash table - 'x-y' - []
+    -minX, maxX, minY
+    -queue of nodes to visit
+Iterate over each node
+    -have size variable to keep track of how many nodes in current level
+    -loop through from 0 to size
+        -remove first node from queue
+        -add node val and x and y coordinates to hash table
+            - if hash key already exists, add then sort that array
+        -push left and right nodes for current node, with x-1/x+1 and y-1
+Iterate over hash table from minX to maxX and minY and build output array
+Return output array
+    
+*/
+
 const verticalTraversal = (root) => {
   let hash = {};
   let minX = Infinity,
