@@ -7,3 +7,17 @@
  *      words are not anagrams
  * Since we never returned false in the previous loop, we can return true here
  */
+
+const isAnagram = (s, t) => {
+  if (s.length !== t.length) return false;
+  let hash = {};
+  for (const char of s) {
+    hash[char] ? hash[char]++ : (hash[char] = 1);
+  }
+
+  for (const char of t) {
+    if (hash[char] < 0 || !hash[char]) return false;
+    hash[char]--;
+  }
+  return true;
+};
