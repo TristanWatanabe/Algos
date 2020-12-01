@@ -21,3 +21,10 @@ const isAnagram = (s, t) => {
   }
   return true;
 };
+
+/**
+ * S - number of characters in s
+ * T - number of characters in t
+ * Time Complexity: O(max(S,T))
+ * Space Complexity: O(S)
+ */
