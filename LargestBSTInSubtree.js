@@ -13,7 +13,7 @@
  *      count - call findNumNodes to get number of nodes in subtree
  *  if root is null, return
  *  Call isBST to check if current subtree is a valid BST
- *      - if yes, set largest to larger number between largest and count
+ *      - if yes, set largest to larger number between largest and count and then return
  *      - else, recursively call findLargest on root.left and root.right
  * isBST: root, min, max
  *  If root is null, return true
@@ -61,3 +61,9 @@ const largestBSTSubtree = (root) => {
   findLargest(root);
   return largest;
 };
+
+/**
+ * N - number of nodes in tree
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
