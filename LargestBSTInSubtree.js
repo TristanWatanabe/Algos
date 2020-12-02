@@ -21,3 +21,43 @@
  *      - recursively call isBST on left and right children of root to check if the rest of tree is a BST
  *  Else return false
  */
+
+const largestBSTSubtree = (root) => {
+  const findLargest = (root) => {
+    if (!root) return;
+    let count = findNumNodes(root);
+
+    if (isBST(root, -Infinity, Infinity)) {
+      largest = Math.max(largest, count);
+      return;
+    } else {
+      findLargest(root.left);
+      findLargest(root.right);
+    }
+  };
+  const findNumNodes = (root) => {
+    let stack = [root];
+    let count = 0;
+    while (stack.length) {
+      let curr = stack.shift();
+      count++;
+      if (curr.left) stack.push(curr.left);
+      if (curr.right) stack.push(curr.right);
+    }
+    return count;
+  };
+  const isBST = (root, min, max) => {
+    if (!root) return true;
+    if (root.val > min && root.val < max) {
+      return (
+        isBST(root.left, min, root.val) && isBST(root.right, root.val, max)
+      );
+    }
+    return false;
+  };
+
+  if (!root) return 0;
+  let largest = 0;
+  findLargest(root);
+  return largest;
+};
