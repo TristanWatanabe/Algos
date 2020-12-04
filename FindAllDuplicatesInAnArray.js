@@ -21,3 +21,9 @@ const findDuplicates = (nums) => {
   }
   return duplicates;
 };
+
+/**
+ * N - number of elements in array
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
