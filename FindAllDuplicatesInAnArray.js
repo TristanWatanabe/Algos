@@ -6,5 +6,18 @@
  *      -if we try to mark an already negative number index, then that means we've seen that number already
  *          - - add to duplicates array
  *      -else : mark num-1 to be a negative
- * Return results
+ * Return duplicates
  */
+
+const findDuplicates = (nums) => {
+  let duplicates = [];
+  for (const num of nums) {
+    const x = Math.abs(num);
+    if (nums[x - 1] < 0) {
+      duplicates.push(x);
+    } else {
+      nums[x - 1] = -nums[x - 1];
+    }
+  }
+  return duplicates;
+};
