@@ -19,3 +19,10 @@ class Logger {
     return true;
   }
 }
+
+/**
+ * N - number of messages logged
+ * shouldPrint:
+ *  Time Complexity: O(1)
+ *  Space Complexity: O(N)
+ */
