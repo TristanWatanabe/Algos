@@ -45,3 +45,10 @@ const wallsAndGates = (rooms) => {
     }
   }
 };
+
+/**
+ * R - number of rows
+ * C - number of columns
+ * Time Complexity: O(R*C)
+ * Space Complexity: O(R*C)
+ */
