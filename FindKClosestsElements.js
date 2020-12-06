@@ -28,3 +28,9 @@ const findClosestElements = (arr, k, x) => {
   }
   return arr.slice(left, left + k);
 };
+
+/**
+ * N - number of elements in array
+ * Time Complexity: O(logN)
+ * Space Complexity: O(k)
+ */
