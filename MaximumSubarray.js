@@ -19,3 +19,9 @@ const maxSubArray = (nums) => {
   }
   return globalSum;
 };
+
+/**
+ * N - number of elements in array
+ * Time Complexity: O(N)
+ * Space COmplexity: O(1)
+ */
