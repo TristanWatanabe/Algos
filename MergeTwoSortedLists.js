@@ -30,3 +30,10 @@ const mergeTwoLists = (l1, l2) => {
   curr.next = l1 ? l1 : l2;
   return prehead.next;
 };
+
+/**
+ * N - number of nodes in l1
+ * M - number of nodes in l2
+ * Time Complexity: O(N+M)
+ * Space Complexity: O(1)
+ */
