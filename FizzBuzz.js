@@ -19,3 +19,9 @@ const fizzBuzz = (n) => {
   }
   return result;
 };
+
+/**
+ * N - input number
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
