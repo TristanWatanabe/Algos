@@ -17,3 +17,9 @@ const sortArrayByParity = (A) => {
   }
   return evens.concat(odds);
 };
+
+/**
+ * N - number of elements in array
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
