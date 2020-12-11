@@ -7,3 +7,13 @@
  *  - else, push to odds array
  * Return a concatenated version of evens and odds with evens being first
  */
+
+const sortArrayByParity = (A) => {
+  let evens = [],
+    odds = [];
+  for (const num of A) {
+    if (num % 2 === 0) evens.push(num);
+    else odds.push(num);
+  }
+  return evens.concat(odds);
+};
