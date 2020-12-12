@@ -14,3 +14,24 @@
  * Return sorted array's length
  *
  */
+
+const removeDuplicates = (nums) => {
+  let prev = null;
+  let count = 0;
+  for (let i = nums.length - 1; i >= 0; i--) {
+    const num = nums[i];
+    const last = nums[nums.length - 1];
+    if (prev !== num) {
+      prev = num;
+      count = 1;
+    } else if (prev === num && count == 2) {
+      nums[i] = last;
+      nums[nums.length - 1] = num;
+      nums.pop();
+    } else {
+      count++;
+    }
+  }
+
+  return nums.sort((a, b) => a - b).length;
+};
