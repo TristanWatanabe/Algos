@@ -35,3 +35,9 @@ const removeDuplicates = (nums) => {
 
   return nums.sort((a, b) => a - b).length;
 };
+
+/**
+ * N - number of elements in array
+ * Time Complexity: O(NLogN)
+ * Space Complexity: O(1)
+ */
