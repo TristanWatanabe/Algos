@@ -23,3 +23,9 @@ const sumOfLeftLeaves = (root) => {
   traverse(root);
   return sum;
 };
+
+/**
+ * N - number of nodes in tree
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
