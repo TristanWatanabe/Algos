@@ -11,3 +11,15 @@
  *  - Recurse on root's right child
  *
  */
+
+const sumOfLeftLeaves = (root) => {
+  let sum = 0;
+  const traverse = (root) => {
+    if (!root) return;
+    if (root.left && !root.left.left && !root.left.right) sum += root.left.val;
+    traverse(root.left);
+    traverse(root.right);
+  };
+  traverse(root);
+  return sum;
+};
