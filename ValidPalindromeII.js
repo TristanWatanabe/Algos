@@ -11,3 +11,27 @@
  *              - else return false since the string cant be a valid palindrome
  *  Return true if it gets to this point since that means that the string was valid without needing to delete anything
  */
+
+const validPalindrome = (s) => {
+  let left = 0,
+    right = s.length - 1;
+  while (left <= right) {
+    if (s[left] !== s[right]) {
+      if (isPalindrome(left + 1, right, s) || isPalindrome(left, right - 1, s))
+        return true;
+      else return false;
+    } else {
+      left++, right--;
+    }
+  }
+  return true;
+};
+
+const isPalindrome = (left, right, str) => {
+  while (left <= right) {
+    if (str[left] !== str[right]) return false;
+    left++, right--;
+  }
+
+  return true;
+};
