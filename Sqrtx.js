@@ -26,3 +26,9 @@ const mySqrt = (x) => {
   }
   return right;
 };
+
+/**
+ * N - input number
+ * Time Complexity: O(LogN)
+ * Space Complexity: O(1)
+ */
