@@ -13,3 +13,25 @@
     If there's a carry, push carry to ans array
     Return the array as reversed and then join
 */
+
+const addStrings = (num1, num2) => {
+  let ans = [];
+  let p1 = num1.length - 1,
+    p2 = num2.length - 1;
+  let carry = 0;
+  while (p1 >= 0 || p2 >= 0) {
+    let val1 = num1[p1] ? num1[p1] - "0" : 0;
+    let val2 = num2[p2] ? num2[p2] - "0" : 0;
+    let sum = val1 + val2 + carry;
+    if (sum >= 10) {
+      carry = 1;
+      sum = sum % 10;
+    } else {
+      carry = 0;
+    }
+    ans.push(sum);
+    p1--, p2--;
+  }
+  if (carry) ans.push(carry);
+  return ans.reverse().join("");
+};
