@@ -35,3 +35,10 @@ const addStrings = (num1, num2) => {
   if (carry) ans.push(carry);
   return ans.reverse().join("");
 };
+
+/**
+ * N - number of characters in first string
+ * M - number of characters in second string
+ * Time Complexity: O(max(N, M))
+ * Space Complexity: O(max(N,M))
+ */
