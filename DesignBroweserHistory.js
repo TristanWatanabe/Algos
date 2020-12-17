@@ -52,3 +52,9 @@ class BrowserHistory {
     return this.pages[this.currIdx];
   }
 }
+
+/**
+ * N - number of websites visited
+ * Time Complexity: O(1)
+ * Space Complexity: O(N)
+ */
