@@ -19,3 +19,36 @@
         Return pages at current index
 
 */
+
+class BrowserHistory {
+  constructor(homepage) {
+    this.currIdx = 0;
+    this.pages = [homepage];
+  }
+
+  visit(url) {
+    if (this.currIdx !== this.pages.length - 1) {
+      this.pages = this.pages.slice(0, this.currIdx + 1);
+    }
+    this.pages.push(url);
+    this.currIdx++;
+  }
+
+  back(steps) {
+    if (this.currIdx - steps <= 0) {
+      this.currIdx = 0;
+    } else {
+      this.currIdx = this.currIdx - steps;
+    }
+    return this.pages[this.currIdx];
+  }
+
+  forward(steps) {
+    if (this.currIdx + steps > this.pages.length - 1) {
+      this.currIdx = this.pages.length - 1;
+    } else {
+      this.currIdx = this.currIdx + steps;
+    }
+    return this.pages[this.currIdx];
+  }
+}
