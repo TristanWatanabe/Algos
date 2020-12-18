@@ -30,3 +30,9 @@ class HitCounter {
     return arr.reduce((sum, hit) => sum + hit[1], 0);
   }
 }
+
+/**
+ * N - number of hits within last 300 seconds/5 mins
+ * Time Complexity: O(N) for getHits, O(1) for hit
+ * Space Complexity: O(N)
+ */
