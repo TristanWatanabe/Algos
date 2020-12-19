@@ -9,3 +9,9 @@ const numWaterBottles = (numBottles, numExchange) => {
   }
   return count;
 };
+
+/**
+ * N - number of bottles
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
