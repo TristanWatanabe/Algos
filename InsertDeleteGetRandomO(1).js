@@ -70,3 +70,9 @@ class RandomizedSet {
     return this.nums[index];
   }
 }
+
+/**
+ * N - number of elements inserted
+ * Time Complexity: O(1) for all
+ * Space Complexity: O(N)
+ */
