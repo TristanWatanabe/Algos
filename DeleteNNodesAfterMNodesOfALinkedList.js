@@ -37,3 +37,9 @@ const getNext = (n, curr) => {
 
   return curr;
 };
+
+/**
+ * N - number of nodes in Linked List
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
