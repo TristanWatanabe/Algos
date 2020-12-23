@@ -26,3 +26,9 @@ const missingElement = (nums, k) => {
 const missing = (index, nums) => {
   return nums[index] - nums[0] - index;
 };
+
+/**
+ * N - number of elements in array
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
