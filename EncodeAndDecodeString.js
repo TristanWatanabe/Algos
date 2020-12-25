@@ -12,3 +12,16 @@
     else: return a split of the string removing the charcode 258 encoder
 
 */
+
+const encode = (strs) => {
+  if (!strs.length) return String.fromCharCode(257);
+  let delimiter = String.fromCharCode(258);
+  return strs.join(delimiter);
+};
+
+const decode = (s) => {
+  let delimiter = String.fromCharCode(258);
+
+  if (s === String.fromCharCode(257)) return [];
+  return s.split(delimiter);
+};
