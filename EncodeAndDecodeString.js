@@ -25,3 +25,9 @@ const decode = (s) => {
   if (s === String.fromCharCode(257)) return [];
   return s.split(delimiter);
 };
+
+/**
+ * N - number of characters in string
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
