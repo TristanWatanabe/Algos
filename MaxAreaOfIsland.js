@@ -43,3 +43,10 @@ const traverse = (i, j, numRows, numCols, grid) => {
     );
   }
 };
+
+/**
+ * N - number of rows in grid
+ * M - number of columns in grid
+ * Time Complexity: O(N*M)
+ * Space Complexity: O(N*M)
+ */
