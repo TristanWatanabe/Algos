@@ -31,3 +31,9 @@ const merge = (intervals) => {
   result.push([min, max]);
   return result;
 };
+
+/**
+ * N - number of intervals in array
+ * Time Complexity: O(NLogN), sorting dominates time complexity
+ * Space Complexity: O(N)
+ */
