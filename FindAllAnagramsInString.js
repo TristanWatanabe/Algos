@@ -54,3 +54,10 @@ const compare = (hash1, hash2) => {
   }
   return true;
 };
+
+/**
+ * S - number of characters in S
+ * P - number of characters in P
+ * Time Complexity: O(S + P)
+ * Space Complexity: O(1) since hash tables will store at most 26 characters
+ */
