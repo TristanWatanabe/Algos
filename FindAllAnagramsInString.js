@@ -22,3 +22,35 @@
         - Compare hashS and hashP to see if they have the same key value pairs
 
 */
+
+const findAnagrams = (s, p) => {
+  if (s.length < p.length) return [];
+  let hashP = {};
+  let hashS = {};
+  //build hashtable for all characters in P
+  for (let char of p) {
+    hashP[char] ? hashP[char]++ : (hashP[char] = 1);
+  }
+  let low = 0;
+  let high = 0;
+  let result = [];
+  while (high <= s.length) {
+    //if there's too many characters in sliding window, compare hashS and hashP and then
+    //move slding window to right
+    if (high - low === p.length) {
+      if (compare(hashS, hashP)) result.push(low);
+      hashS[s[low]] === 1 ? delete hashS[s[low]] : hashS[s[low]]--;
+      low++;
+    }
+    hashS[s[high]] ? hashS[s[high]]++ : (hashS[s[high]] = 1);
+    high++;
+  }
+  return result;
+};
+
+const compare = (hash1, hash2) => {
+  for (let key in hash2) {
+    if (hash1[key] !== hash2[key]) return false;
+  }
+  return true;
+};
