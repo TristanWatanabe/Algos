@@ -13,3 +13,23 @@
         - set curr= curr.next
 
 */
+
+var removeElements = function (head, val) {
+  let prev = null;
+  let curr = head;
+  while (curr) {
+    if (curr.val === val) {
+      if (prev) {
+        prev.next = curr.next;
+        curr = curr.next;
+      } else {
+        head = head.next;
+        curr = head;
+      }
+    } else {
+      prev = curr;
+      curr = curr.next;
+    }
+  }
+  return head;
+};
