@@ -33,3 +33,9 @@ var removeElements = function (head, val) {
   }
   return head;
 };
+
+/**
+ * N - number of elements in linked list
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
+ */
