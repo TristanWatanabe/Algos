@@ -16,3 +16,9 @@ const shortestPalindrome = (s) => {
   }
   return "";
 };
+
+/**
+ * N - number of characters in S
+ * Time Complexity: O(N^2)
+ * Space Complexity: O(N)
+ */
