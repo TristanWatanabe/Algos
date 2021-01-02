@@ -6,3 +6,13 @@
     Return empty string for edge case where S is an empty string
 
 */
+
+const shortestPalindrome = (s) => {
+  let length = s.length;
+  let reverse = s.split("").reverse().join("");
+  for (let i = 0; i < length; i++) {
+    if (s.substring(0, length - i) === reverse.substring(i))
+      return reverse.substring(0, i) + s;
+  }
+  return "";
+};
