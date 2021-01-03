@@ -39,3 +39,9 @@ class MovingAverage {
     return this.total / this.count;
   }
 }
+
+/**
+ * N - number of data inserted
+ * Time Complexity: O(1)
+ * Space Complexity: O(N)
+ */
