@@ -17,3 +17,25 @@
         return total divided by count
  
  */
+
+class MovingAverage {
+  constructor(capacity) {
+    this.capacity = capacity;
+    this.count = 0;
+    this.curr = 0; //index of next num to remove from array
+    this.total = 0;
+    this.nums = [];
+  }
+
+  next(val) {
+    if (this.count === this.capacity) {
+      this.total -= this.nums[this.curr];
+      this.curr++;
+    } else {
+      this.count++;
+    }
+    this.nums.push(val);
+    this.total += val;
+    return this.total / this.count;
+  }
+}
