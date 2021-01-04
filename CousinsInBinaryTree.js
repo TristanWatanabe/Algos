@@ -42,3 +42,9 @@ const isCousins = (root, x, y) => {
     }
   }
 };
+
+/**
+ * N - number of nodes in tree
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
