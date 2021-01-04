@@ -16,3 +16,29 @@
     if node has a right, push [right, parent, level+1]
 
 */
+
+const isCousins = (root, x, y) => {
+  //[node, parent, level]
+  let stack = [[root, null, 0]];
+  let found = [];
+  while (stack.length) {
+    let size = stack.length;
+    for (let i = 0; i < size; i++) {
+      let node = stack.pop();
+      let curr = node[0],
+        parent = node[1],
+        level = node[2];
+      if (curr.val === x || curr.val === y) {
+        if (!parent) return false;
+        found.push([curr, parent, level]);
+      }
+      if (found.length === 2) {
+        if (found[0][2] !== found[1][2] || found[0][1] === found[1][1])
+          return false;
+        return true;
+      }
+      if (curr.left) stack.push([curr.left, curr, level + 1]);
+      if (curr.right) stack.push([curr.right, curr, level + 1]);
+    }
+  }
+};
