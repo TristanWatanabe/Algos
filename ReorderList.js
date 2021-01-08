@@ -28,3 +28,9 @@ const reorderList = (head) => {
   }
   return head;
 };
+
+/**
+ * N - number of nodes in list
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
