@@ -1,4 +1,4 @@
-var minAddToMakeValid = function (S) {
+const minAddToMakeValid = (S) => {
   let stack = [];
   let count = 0;
   for (let char of S) {
