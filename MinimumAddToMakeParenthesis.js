@@ -11,3 +11,9 @@ const minAddToMakeValid = (S) => {
   }
   return count + stack.length;
 };
+
+/**
+ * N - number of characters in s
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ */
