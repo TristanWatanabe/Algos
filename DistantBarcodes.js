@@ -15,3 +15,9 @@ const rearrangeBarcodes = (barcodes) => {
 
   return barcodes;
 };
+
+/**
+ * N - number of barcodes in array
+ * Time Complexity: O(NLogN)
+ * Space Complexity: O(N)
+ */
